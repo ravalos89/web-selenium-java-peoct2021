@@ -16,6 +16,8 @@ public class GoogleTest {
 
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
+		
+		// AQUI
 
 	}
 }

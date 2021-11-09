@@ -7,11 +7,11 @@ public class ConditionalStatement {
 		
 		int velocidad = 50; // KM/H
 		int limiteVelocidad = 60;
-		boolean carretera = false;
+		boolean carretera = true;
 		
 		// IF
 		// IF ELSE
-		// IF anidado
+		// IF Anidado
 		// IF ELSE IF
 		if(carretera) {
 			
