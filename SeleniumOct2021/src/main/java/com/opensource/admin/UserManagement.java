@@ -20,8 +20,16 @@ public class UserManagement extends Base{
 	
 	public void searchUsername(String username) {
 		reporter("Search username..."+username);
+		click(lnkAdmin);
 		type(txtUsername, username);
+		click(btnSearch);
 		implicitWait();
+	}
+	
+	public void validateUsernameTable(String expectedUsername) {
+		reporter("Validate Username in table results");
+		String username = getText(tblUsername);
+		assertEquals(username, expectedUsername);
 	}
 	
 	
