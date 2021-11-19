@@ -16,6 +16,8 @@ public class TC001_Validate_User_Admin_POM {
 	Base base;
 	UserManagement um;
 	Login login;
+	
+	String username, pwd;
 
 	@BeforeTest
 	public void beforeTest() {
@@ -23,6 +25,9 @@ public class TC001_Validate_User_Admin_POM {
 		driver = base.chromeDriverConnection();
 		login = new Login(driver);
 		um = new UserManagement(driver);
+		
+		this.username = "Admin";
+		this.pwd = "admin123";
 	}
 
 	@Test
@@ -32,13 +37,13 @@ public class TC001_Validate_User_Admin_POM {
 		base.launchBrowser(GlobalVariables.QA_URL);
 		
 		// Step 2, 3, 4
-		login.loginOrange("Admin", "admin123");
+		login.loginOrange(username, pwd);
 		
 		// Step 5, 6, 7
-		um.searchUsername("Admin");
+		um.searchUsername(username);
 		
 		// Step 8
-		um.validateUsernameTable("Admin");
+		um.validateUsernameTable(username);
 
 	}
 
