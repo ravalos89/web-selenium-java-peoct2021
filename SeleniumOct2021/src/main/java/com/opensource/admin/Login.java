@@ -11,16 +11,46 @@ public class Login extends Base{
 	By txtPassword = By.id("txtPassword");
 	By btnLogin = By.id("btnLogin");
 	By btnWelcome = By.id("welcome");
+	By lblInvalidMsg = By.id("spanMessage");
 
 	public Login(WebDriver driver) {
 		super(driver);
 	}
 	
-	public void loginOrange(String username, String pwd) {
+//	public void loginOrange(String username, String pwd) {
+//		reporter("Login Successfully");
+//		type(txtUsername, username);
+//		type(txtPassword, pwd);
+//		click(btnLogin);
+//		waitForElementPresent(btnWelcome);
+//	}
+	
+	public void loginOrange(String username, String pwd, boolean isLogged) {
+		reporter("Login Successfully");
 		type(txtUsername, username);
 		type(txtPassword, pwd);
 		click(btnLogin);
-		waitForElementPresent(btnWelcome);
+		if(isLogged) {
+			waitForElementPresent(btnWelcome);
+		}
+	}
+	
+	public void loginOrange(String username, String pwd) {
+		loginOrange(username, pwd, true);
+	}
+	
+//	public void loginFailedOrange(String username, String pwd) {
+//		reporter("Login Failed Orange");
+//		type(txtUsername, username);
+//		type(txtPassword, pwd);
+//		click(btnLogin);
+//	}
+	
+	public void validateLoginFailed(String expectedMsg) {
+		reporter("Validate Invalid Password message");
+		waitForElementPresent(lblInvalidMsg);
+		String actualInvalidMsg = getText(lblInvalidMsg);
+		assertEquals(actualInvalidMsg, expectedMsg);
 	}
 
 }
