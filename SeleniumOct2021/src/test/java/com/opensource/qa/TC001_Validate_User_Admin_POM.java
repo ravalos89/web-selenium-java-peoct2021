@@ -20,14 +20,15 @@ public class TC001_Validate_User_Admin_POM {
 	String username, pwd;
 
 	@BeforeTest
-	public void beforeTest() {
+	public void beforeTest(){
 		base = new Base(driver);
 		driver = base.chromeDriverConnection();
 		login = new Login(driver);
 		um = new UserManagement(driver);
 		
-		this.username = "Admin";
-		this.pwd = "admin123";
+		// JSON handling 
+		this.username = base.getJSONData("Credentials", "username");
+		this.pwd = base.getJSONData("Credentials", "password");
 	}
 
 	@Test

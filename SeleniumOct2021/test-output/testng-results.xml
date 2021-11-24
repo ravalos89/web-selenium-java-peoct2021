@@ -14,16 +14,16 @@
       <![CDATA[Validate Username in table results]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-11-19T03:11:50Z" name="Default suite" finished-at="2021-11-19T03:12:01Z" duration-ms="10880">
+  <suite started-at="2021-11-24T01:53:27Z" name="Default suite" finished-at="2021-11-24T01:54:26Z" duration-ms="58381">
     <groups>
     </groups>
-    <test started-at="2021-11-19T03:11:50Z" name="Default test" finished-at="2021-11-19T03:12:01Z" duration-ms="10880">
+    <test started-at="2021-11-24T01:53:27Z" name="Default test" finished-at="2021-11-24T01:54:26Z" duration-ms="58381">
       <class name="com.opensource.qa.TC001_Validate_User_Admin_POM">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@3081f72c]" started-at="2021-11-19T03:11:50Z" name="beforeTest" finished-at="2021-11-19T03:11:52Z" duration-ms="2105" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@5b67bb7e]" started-at="2021-11-24T01:53:27Z" name="beforeTest" finished-at="2021-11-24T01:54:18Z" duration-ms="50787" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="tc001()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@3081f72c]" started-at="2021-11-19T03:11:52Z" name="tc001" finished-at="2021-11-19T03:12:01Z" duration-ms="8634" status="PASS">
+        <test-method signature="tc001()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@5b67bb7e]" started-at="2021-11-24T01:54:18Z" name="tc001" finished-at="2021-11-24T01:54:26Z" duration-ms="7374" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Launch Browser... https://opensource-demo.orangehrmlive.com]]>
@@ -39,7 +39,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- tc001 -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@3081f72c]" started-at="2021-11-19T03:12:01Z" name="afterTest" finished-at="2021-11-19T03:12:01Z" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@5b67bb7e]" started-at="2021-11-24T01:54:26Z" name="afterTest" finished-at="2021-11-24T01:54:26Z" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
