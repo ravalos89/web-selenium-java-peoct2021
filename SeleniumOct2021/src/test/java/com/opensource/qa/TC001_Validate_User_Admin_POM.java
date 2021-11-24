@@ -26,9 +26,13 @@ public class TC001_Validate_User_Admin_POM {
 		login = new Login(driver);
 		um = new UserManagement(driver);
 		
-		// JSON handling 
-		this.username = base.getJSONData("Credentials", "username");
-		this.pwd = base.getJSONData("Credentials", "password");
+//		// JSON handling 
+//		this.username = base.getJSONData("Credentials", "username");
+//		this.pwd = base.getJSONData("Credentials", "password");
+		
+		// Excel data handling
+		this.username = base.getCellData("Credentials", 1, 0);
+		this.pwd = base.getCellData("Credentials", 1, 1);
 	}
 
 	@Test

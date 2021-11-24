@@ -16,6 +16,8 @@ public class TC002_Validate_Invalid_Password {
 	Base base;
 	UserManagement um;
 	Login login;
+	
+	String username, pwd, msgFailed;
 
 	@BeforeTest
 	public void beforeTest() {
@@ -23,6 +25,16 @@ public class TC002_Validate_Invalid_Password {
 		driver = base.chromeDriverConnection();
 		login = new Login(driver);
 		um = new UserManagement(driver);
+		
+//		// JSON files
+//		this.username = base.getJSONData("Credentials", "username");
+//		this.pwd = base.getJSONData("Credentials", "passwordFailed");
+//		this.msgFailed = base.getJSONData(this.getClass().getSimpleName(), "failedMsg");
+		
+		// Excel data handling
+		this.username = base.getCellData("Credentials", 1, 0);
+		this.pwd = base.getCellData("Credentials", 1, 2);
+		this.msgFailed = base.getCellData(this.getClass().getSimpleName(), 1, 0);
 	}
 
 	@Test
@@ -32,10 +44,10 @@ public class TC002_Validate_Invalid_Password {
 		base.launchBrowser(GlobalVariables.QA_URL);
 		
 		// Step 2, 3
-		login.loginOrange("Admin", "admon12345", false);
+		login.loginOrange(username, pwd, false);
 		
 		// Step 4
-		login.validateLoginFailed("Invalid credentials");
+		login.validateLoginFailed(msgFailed);
 
 	}
 

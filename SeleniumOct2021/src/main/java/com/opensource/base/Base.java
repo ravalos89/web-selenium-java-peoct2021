@@ -2,9 +2,15 @@ package com.opensource.base;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.By;
@@ -141,6 +147,32 @@ public class Base {
 
 		} catch (FileNotFoundException e) {
 			Assert.fail("JSON file is not found");
+			return null;
+		}
+	}
+	
+	/*
+	 * Get Value from Excel
+	 * @author Ricardo Avalos 
+	 * @date 02/18/2019
+	 */
+	public String getCellData(String excelName, int row, int column) {
+		try {
+			// Reading Data
+			FileInputStream fis = new FileInputStream(GlobalVariables.PATH_EXCEL_DATA+excelName+".xlsx");
+			// Constructs an XSSFWorkbook object
+			@SuppressWarnings("resource")
+			Workbook wb = new XSSFWorkbook(fis);
+			Sheet sheet = wb.getSheetAt(0);
+			Row rowObj = sheet.getRow(row);
+			Cell cell = rowObj.getCell(column);
+			String value = cell.getStringCellValue();
+			return value;
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		} catch (IOException e1) {
+			e1.printStackTrace();
 			return null;
 		}
 	}
