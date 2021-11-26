@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Launch Browser... https://opensource-demo.orangehrmlive.com]]>
-    </line>
-    <line>
-      <![CDATA[Launch Browser... https://opensource-demo.orangehrmlive.com]]>
-    </line>
-    <line>
-      <![CDATA[Login Successfully]]>
     </line>
     <line>
       <![CDATA[Login Successfully]]>
@@ -16,39 +10,17 @@
     <line>
       <![CDATA[Validate Invalid Password message]]>
     </line>
-    <line>
-      <![CDATA[Search username...Admin]]>
-    </line>
-    <line>
-      <![CDATA[Validate Username in table results]]>
-    </line>
   </reporter-output>
-  <suite started-at="2021-11-24T03:18:08Z" name="QA_Regression" finished-at="2021-11-24T03:18:20Z" duration-ms="11970">
+  <suite started-at="2021-11-26T02:01:58Z" name="Default suite" finished-at="2021-11-26T02:02:08Z" duration-ms="9983">
     <groups>
     </groups>
-    <test started-at="2021-11-24T03:18:08Z" name="TC003" finished-at="2021-11-24T03:18:08Z" duration-ms="50">
-      <class name="com.opensource.qa.TC003">
-        <test-method signature="tc003()[pri:0, instance:com.opensource.qa.TC003@3943a2be]" started-at="2021-11-24T03:18:08Z" name="tc003" finished-at="2021-11-24T03:18:08Z" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc003 -->
-      </class> <!-- com.opensource.qa.TC003 -->
-    </test> <!-- TC003 -->
-    <test started-at="2021-11-24T03:18:08Z" name="TC004" finished-at="2021-11-24T03:18:08Z" duration-ms="50">
-      <class name="com.opensource.qa.TC004">
-        <test-method signature="tc004()[pri:0, instance:com.opensource.qa.TC004@36d585c]" started-at="2021-11-24T03:18:08Z" name="tc004" finished-at="2021-11-24T03:18:08Z" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc004 -->
-      </class> <!-- com.opensource.qa.TC004 -->
-    </test> <!-- TC004 -->
-    <test started-at="2021-11-24T03:18:08Z" name="TC002" finished-at="2021-11-24T03:18:17Z" duration-ms="8889">
+    <test started-at="2021-11-26T02:01:58Z" name="Default test" finished-at="2021-11-26T02:02:08Z" duration-ms="9983">
       <class name="com.opensource.qa.TC002_Validate_Invalid_Password">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@186f8716]" started-at="2021-11-24T03:18:08Z" name="beforeTest" finished-at="2021-11-24T03:18:12Z" duration-ms="3968" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@7c214cc0]" started-at="2021-11-26T02:01:58Z" name="beforeTest" finished-at="2021-11-26T02:02:02Z" duration-ms="3299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="tc002()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@186f8716]" started-at="2021-11-24T03:18:12Z" name="tc002" finished-at="2021-11-24T03:18:17Z" duration-ms="4742" status="PASS">
+        <test-method signature="tc002()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@7c214cc0]" started-at="2021-11-26T02:02:02Z" name="tc002" finished-at="2021-11-26T02:02:08Z" duration-ms="6505" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Launch Browser... https://opensource-demo.orangehrmlive.com]]>
@@ -61,39 +33,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- tc002 -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@186f8716]" started-at="2021-11-24T03:18:17Z" name="afterTest" finished-at="2021-11-24T03:18:17Z" duration-ms="163" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@7c214cc0]" started-at="2021-11-26T02:02:08Z" name="afterTest" finished-at="2021-11-26T02:02:08Z" duration-ms="151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.opensource.qa.TC002_Validate_Invalid_Password -->
-    </test> <!-- TC002 -->
-    <test started-at="2021-11-24T03:18:08Z" name="TC001" finished-at="2021-11-24T03:18:20Z" duration-ms="11970">
-      <class name="com.opensource.qa.TC001_Validate_User_Admin_POM">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@7a675056]" started-at="2021-11-24T03:18:08Z" name="beforeTest" finished-at="2021-11-24T03:18:12Z" duration-ms="3897" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="tc001()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@7a675056]" started-at="2021-11-24T03:18:12Z" name="tc001" finished-at="2021-11-24T03:18:20Z" duration-ms="7913" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Launch Browser... https://opensource-demo.orangehrmlive.com]]>
-            </line>
-            <line>
-              <![CDATA[Login Successfully]]>
-            </line>
-            <line>
-              <![CDATA[Search username...Admin]]>
-            </line>
-            <line>
-              <![CDATA[Validate Username in table results]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tc001 -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@7a675056]" started-at="2021-11-24T03:18:20Z" name="afterTest" finished-at="2021-11-24T03:18:20Z" duration-ms="145" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.opensource.qa.TC001_Validate_User_Admin_POM -->
-    </test> <!-- TC001 -->
-  </suite> <!-- QA_Regression -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

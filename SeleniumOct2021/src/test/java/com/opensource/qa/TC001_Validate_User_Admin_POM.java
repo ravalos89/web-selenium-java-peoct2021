@@ -9,6 +9,8 @@ import com.opensource.admin.Login;
 import com.opensource.admin.UserManagement;
 import com.opensource.base.Base;
 import com.opensource.base.GlobalVariables;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 public class TC001_Validate_User_Admin_POM {
 
@@ -18,6 +20,9 @@ public class TC001_Validate_User_Admin_POM {
 	Login login;
 	
 	String username, pwd;
+	
+	ExtentReports reports;
+	ExtentTest extentTest;
 
 	@BeforeTest
 	public void beforeTest(){

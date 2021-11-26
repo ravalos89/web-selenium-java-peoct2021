@@ -17,8 +17,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -59,6 +61,7 @@ public class Base {
 			reporter("Launch Browser... "+ url);
 			driver.get(url);
 			driver.manage().window().maximize();
+			takeScreenshot("LaunchBrowser");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -85,6 +88,7 @@ public class Base {
 	public void click(By locator) {
 		try {
 			driver.findElement(locator).click();
+//			takeScreenshot("Click"+randomNumber());
 		}catch(NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -202,6 +206,37 @@ public class Base {
 			return null;
 		}
 
+	}
+	
+	/*
+	 * Highlight
+	 * @author Ricardo Avalos
+	 * @date 02/23/2021
+	 */
+	public void highlightObject(WebElement element){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+	}
+	
+	/*
+	 * Highlight
+	 * @author Ricardo Avalos
+	 * @date 02/23/2021
+	 */
+	public void highlightObject(By locator){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement object = driver.findElement(locator);
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", object);
+	}
+	
+	/*
+	 * Random Number
+	 * @author Ricardo Avalos
+	 * @date 02/23/2021
+	 */
+	
+	public int randomNumber() {
+		return (int)(Math.random()*100);
 	}
 
 }

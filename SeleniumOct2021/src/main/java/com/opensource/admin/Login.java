@@ -29,9 +29,12 @@ public class Login extends Base{
 		reporter("Login Successfully");
 		type(txtUsername, username);
 		type(txtPassword, pwd);
+		takeScreenshot("EnteredUserPassword");
 		click(btnLogin);
+		takeScreenshot("ClickedLogin");
 		if(isLogged) {
 			waitForElementPresent(btnWelcome);
+			takeScreenshot("ValidatedLogged");
 		}
 	}
 	
@@ -51,6 +54,8 @@ public class Login extends Base{
 		waitForElementPresent(lblInvalidMsg);
 		String actualInvalidMsg = getText(lblInvalidMsg);
 		assertEquals(actualInvalidMsg, expectedMsg);
+		highlightObject(lblInvalidMsg);
+		takeScreenshot("InavalidMessage");
 	}
 
 }

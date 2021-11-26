@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="QA_Regression" parallel="tests" thread-count="5">
+<suite name="QA_Regression" parallel="tests" thread-count="2">
 
 	<test name="TC001">
 		<classes>
@@ -12,18 +12,6 @@
 	<test name="TC002">
 		<classes>
 			<class name="com.opensource.qa.TC002_Validate_Invalid_Password" />
-		</classes>
-	</test> <!-- Test -->
-	
-	<test name="TC003">
-		<classes>
-			<class name="com.opensource.qa.TC003" />
-		</classes>
-	</test> <!-- Test -->
-	
-	<test name="TC004">
-		<classes>
-			<class name="com.opensource.qa.TC004" />
 		</classes>
 	</test> <!-- Test -->
 	

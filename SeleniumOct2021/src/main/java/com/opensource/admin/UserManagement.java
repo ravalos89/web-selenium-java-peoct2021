@@ -21,15 +21,20 @@ public class UserManagement extends Base{
 	public void searchUsername(String username) {
 		reporter("Search username..."+username);
 		click(lnkAdmin);
+		takeScreenshot("ClickedAdmin");
 		type(txtUsername, username);
+		takeScreenshot("EnterUsernameText");
 		click(btnSearch);
 		implicitWait();
+		takeScreenshot("ClickedSearch");
 	}
 	
 	public void validateUsernameTable(String expectedUsername) {
 		reporter("Validate Username in table results");
 		String username = getText(tblUsername);
 		assertEquals(username, expectedUsername);
+		highlightObject(tblUsername);
+		takeScreenshot("ValidateUsernameTable");
 	}
 	
 	
