@@ -21,12 +21,12 @@ public class UserManagement extends Base{
 	public void searchUsername(String username) {
 		reporter("Search username..."+username);
 		click(lnkAdmin);
-		takeScreenshot("ClickedAdmin");
+//		takeScreenshot("ClickedAdmin");
 		type(txtUsername, username);
-		takeScreenshot("EnterUsernameText");
+//		takeScreenshot("EnterUsernameText");
 		click(btnSearch);
 		implicitWait();
-		takeScreenshot("ClickedSearch");
+//		takeScreenshot("ClickedSearch");
 	}
 	
 	public void validateUsernameTable(String expectedUsername) {
@@ -34,7 +34,7 @@ public class UserManagement extends Base{
 		String username = getText(tblUsername);
 		assertEquals(username, expectedUsername);
 		highlightObject(tblUsername);
-		takeScreenshot("ValidateUsernameTable");
+//		takeScreenshot("ValidateUsernameTable");
 	}
 	
 	

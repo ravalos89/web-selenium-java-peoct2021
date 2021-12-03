@@ -22,10 +22,13 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import com.relevantcodes.extentreports.ExtentTest;
 
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
@@ -33,6 +36,11 @@ import ru.yandex.qatools.ashot.Screenshot;
 public class Base {
 	
 	private WebDriver driver;
+	File folderEvidence;
+	
+	public void initializeFolderEvidence(File folderEvidence) {
+		this.folderEvidence = folderEvidence;
+	}
 	
 	/*
 	 * Constructor
@@ -54,6 +62,30 @@ public class Base {
 	}
 	
 	/*
+	 * Chrome driver connection
+	 * @autor: ricardo.avalos
+	 * @param:
+	 * @return:
+	 */
+	public WebDriver firefoxDriverConnection() {
+		System.setProperty(GlobalVariables.KEY_CHROME_DRIVER, GlobalVariables.PATH_CHROME_DRIVER);
+		driver = new FirefoxDriver();
+		return driver;
+	}
+	
+	/*
+	 * Chrome driver connection
+	 * @autor: ricardo.avalos
+	 * @param:
+	 * @return:
+	 */
+	public WebDriver androidDriverConnection() {
+		System.setProperty(GlobalVariables.KEY_CHROME_DRIVER, GlobalVariables.PATH_CHROME_DRIVER);
+		driver = new FirefoxDriver();
+		return driver;
+	}
+	
+	/*
 	 * Launch browser
 	 */
 	public void launchBrowser(String url) {
@@ -61,7 +93,7 @@ public class Base {
 			reporter("Launch Browser... "+ url);
 			driver.get(url);
 			driver.manage().window().maximize();
-			takeScreenshot("LaunchBrowser");
+//			takeScreenshot("LaunchBrowser");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -197,7 +229,11 @@ public class Base {
 	 */
 	public String takeScreenshot(String fileName){
 		try {
-			String pathFileName= GlobalVariables.PATH_SCREENSHOTS + fileName + ".png";
+			if(!folderEvidence.exists()) {
+				folderEvidence.mkdirs(); // or file.mkdir()
+			}
+			String absolutePath = folderEvidence.getAbsolutePath()+"/";
+			String pathFileName= absolutePath + fileName + ".png";
 			Screenshot screenshot = new AShot().takeScreenshot(driver);
 			ImageIO.write(screenshot.getImage(), "PNG", new File(pathFileName));
 			return pathFileName;
@@ -237,6 +273,17 @@ public class Base {
 	
 	public int randomNumber() {
 		return (int)(Math.random()*100);
+	}
+	
+	/*
+	 * Create new folder
+	 * @author Ricardo Avalos
+	 */
+	public void createNewFolder(String path) {
+		File file=new File(path);
+		if(!file.exists()) {
+			file.mkdirs(); // or file.mkdir()
+		}		    
 	}
 
 }

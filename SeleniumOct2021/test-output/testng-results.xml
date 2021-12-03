@@ -8,19 +8,22 @@
       <![CDATA[Login Successfully]]>
     </line>
     <line>
-      <![CDATA[Validate Invalid Password message]]>
+      <![CDATA[Search username...Admin]]>
+    </line>
+    <line>
+      <![CDATA[Validate Username in table results]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-11-26T02:01:58Z" name="Default suite" finished-at="2021-11-26T02:02:08Z" duration-ms="9983">
+  <suite started-at="2021-12-01T01:34:18Z" name="Default suite" finished-at="2021-12-01T01:34:31Z" duration-ms="13076">
     <groups>
     </groups>
-    <test started-at="2021-11-26T02:01:58Z" name="Default test" finished-at="2021-11-26T02:02:08Z" duration-ms="9983">
-      <class name="com.opensource.qa.TC002_Validate_Invalid_Password">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@7c214cc0]" started-at="2021-11-26T02:01:58Z" name="beforeTest" finished-at="2021-11-26T02:02:02Z" duration-ms="3299" status="PASS">
+    <test started-at="2021-12-01T01:34:18Z" name="Default test" finished-at="2021-12-01T01:34:31Z" duration-ms="13076">
+      <class name="com.opensource.qa.TC001_Validate_User_Admin_POM">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@7c214cc0]" started-at="2021-12-01T01:34:18Z" name="beforeTest" finished-at="2021-12-01T01:34:22Z" duration-ms="3430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="tc002()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@7c214cc0]" started-at="2021-11-26T02:02:02Z" name="tc002" finished-at="2021-11-26T02:02:08Z" duration-ms="6505" status="PASS">
+        <test-method signature="tc001()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@7c214cc0]" started-at="2021-12-01T01:34:22Z" name="tc001" finished-at="2021-12-01T01:34:31Z" duration-ms="9217" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Launch Browser... https://opensource-demo.orangehrmlive.com]]>
@@ -29,15 +32,18 @@
               <![CDATA[Login Successfully]]>
             </line>
             <line>
-              <![CDATA[Validate Invalid Password message]]>
+              <![CDATA[Search username...Admin]]>
+            </line>
+            <line>
+              <![CDATA[Validate Username in table results]]>
             </line>
           </reporter-output>
-        </test-method> <!-- tc002 -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.qa.TC002_Validate_Invalid_Password@7c214cc0]" started-at="2021-11-26T02:02:08Z" name="afterTest" finished-at="2021-11-26T02:02:08Z" duration-ms="151" status="PASS">
+        </test-method> <!-- tc001 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.qa.TC001_Validate_User_Admin_POM@7c214cc0]" started-at="2021-12-01T01:34:31Z" name="afterTest" finished-at="2021-12-01T01:34:31Z" duration-ms="404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.opensource.qa.TC002_Validate_Invalid_Password -->
+      </class> <!-- com.opensource.qa.TC001_Validate_User_Admin_POM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
